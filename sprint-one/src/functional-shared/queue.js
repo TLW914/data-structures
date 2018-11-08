@@ -6,7 +6,6 @@ var extend = function(obj1, obj2) {
 
 
 var Queue = function() {
-	var obj = {};
 	var someInstance = {}
 	extend(someInstance, queueMethods);
 	someInstance.storage = {};

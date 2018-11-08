@@ -20,11 +20,15 @@ var LinkedList = function() {
   };
 
   list.contains = function(target) {
-    if (list.head.value === target){
-       return true;
-    } else if (list.head.next.value){
-       return true;
+    var temp = list.head;
+    while (temp !== null){
+      if (temp.value === target){
+         return true;
+      } else {
+          temp = temp.next;
+        }
     }
+   return false; 
   };
 
   return list;

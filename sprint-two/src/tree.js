@@ -16,10 +16,13 @@ var Tree = function(value) {
 
 var treeMethods = {};
 
+//LINEAR TIME COMPLEXITY
 treeMethods.addChild = function(value) {
   var tree = Tree(value);
   this.children.push(tree);
 };
+
+//LINEAR TIME COMPLEXITY
 
 treeMethods.contains = function(target) {
   var result = false;

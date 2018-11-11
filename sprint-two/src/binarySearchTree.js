@@ -46,7 +46,16 @@ var binarySearchTreeMethods = {};
   };
 
   binarySearchTreeMethods.depthFirstLog = function(callback){
-
+    var depthRecurse = function(obj){
+      obj.value = callback(obj.value)
+      if(obj.left) {
+        depthRecurse(obj.left)
+      }
+      if(obj.right) {
+        depthRecurse(obj.right)
+      }
+    }
+    depthRecurse(this)
 };
 
 /*
